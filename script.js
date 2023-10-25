@@ -26,6 +26,12 @@ fetch(apiURL)
     .catch(error => {
         console.error('Error fetching data:',error);
     })
+    //Event Listener for currency conversion
+    convertButton.addEventListener('click',()=>{
+        const fromCurrency = fromDropDown.value;
+        const toCurrency =toDropDown.value
+        const amount =parseFloat(amountInput.value);
+        
+    })
 
-    
 }
