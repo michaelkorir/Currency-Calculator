@@ -8,3 +8,17 @@
 body{
     background-color: deepskyblue;
 }
+.card{
+    width: 40%;
+    background-color: aliceblue;
+    position: absolute;
+    padding: auto;
+}
+.app{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.img-icon{
+    width: auto;
+}
