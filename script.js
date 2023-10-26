@@ -53,5 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => {
                 console.error('Error fetching exchange rates:', error);
             });
+            const switchIcon = document.getElementById('switch-currencies')
+            switchIcon.addEventListener('click', ()=>{
+                const fromCurrencyValue = fromCurrencySelect.value;
+                fromCurrencySelect.value = toCurrencySelect.value;
+                toCurrencySelect.value = fromCurrencyValue;
+            });
     });
 });
