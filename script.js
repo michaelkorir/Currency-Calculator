@@ -8,12 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const convertButton = document.getElementById('convert');
     const resultDiv = document.getElementById('result');
 
+    //fetch data from api
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const exchangeRates = data.conversion_rates;
             const currencies = Object.keys(exchangeRates);
 
+            //looping through the options
             currencies.forEach(currency => {
                 const option = document.createElement('option');
                 option.value = currency;
@@ -26,16 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching currency data:', error);
         });
 
+        //Adding Event listener click on the convert button
     convertButton.addEventListener('click', () => {
         const fromCurrency = fromCurrencySelect.value;
         const toCurrency = toCurrencySelect.value;
         const amount = parseFloat(amountInput.value);
 
+        //specifying the values to be entered
         if (isNaN(amount)) {
             resultDiv.textContent = 'Please enter a valid amount.';
             return;
         }
 
+        // fetching the values for different currencies
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
