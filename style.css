@@ -1,24 +1,33 @@
-*{
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
+    padding: 0;
 }
-body{
-    background-color: deepskyblue;
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-.card{
-    width: 40%;
-    background-color: aliceblue;
-    position: absolute;
-    padding: auto;
+
+h1 {
+    text-align: center;
 }
-.app{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
+.converter {
+    text-align: center;
 }
-.img-icon{
-    width: auto;
+
+label, input, select, button {
+    margin: 5px;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
 }
