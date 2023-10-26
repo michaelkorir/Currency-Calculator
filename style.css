@@ -54,3 +54,7 @@ label, input, select, button {
     margin-top: 10px;
     font-weight: bold;
 }
+#swap{
+    margin-top: -74px;
+    cursor: pointer;
+}
